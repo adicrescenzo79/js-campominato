@@ -1,25 +1,46 @@
 var bombe = [];
 var safe = [];
-var scelta = prompt("Scegli la difficoltà: 0 = facile, 1 = medio, 2 = difficile");
+var max = "";
 
-if (scelta == 0) {
-  max = 100;
-} else if (scelta == 1) {
-  max = 80;
-} else {
-  max = 50;
-}
+// document.getElementById("bottone").addEventListener("click", function() {
+//   if (document.getElementById("easy").checked) {
+//     max = 100;
+//     console.log(max);
+//     iniziamo();
+//
+//   } else if (document.getElementById("medium").checked) {
+//     max = 80;
+//     console.log(max);
+//     iniziamo();
+//
+//   } else if (document.getElementById("difficult").checked) {
+//     max = 50;
+//     console.log(max);
+//     iniziamo();
+//
+//   } else {
+//     console.log(ciao);
+//   }
+// });
 
-while (bombe.length < 16) {
-  var nrPc = randomNumberInRange(1, max);
-  if (!bombe.includes(nrPc)) {
-    bombe.push(nrPc);
-  }
-}
-
-console.log("Il tuo punteggio è " + game(bombe, safe, max));
 
 // FUNCTIONS
+function iniziamo() {
+
+  while (bombe.length < 16) {
+    var nrPc = randomNumberInRange(1, max);
+    if (!bombe.includes(nrPc)) {
+      bombe.push(nrPc);
+    }
+  }
+
+  console.log(bombe);
+
+  console.log("Il tuo punteggio è " + game(bombe, safe, max));
+
+  console.log(safe);
+}
+
 function randomNumberInRange(min, max) {
   return Math.floor(Math.random() * max) + min;
 }
