@@ -19,17 +19,15 @@ for (var i = 1; i <= max; i++) {
 }
 
 document.getElementsByClassName("casella").onclick = function() {clickato(clicked)};
-nrUser = document.getElementsByClassName("casella").onclick;
-console.log(nrUser);
-// console.log(nrUser);
-//
-function clickato(clicked) {
-  prova = clicked;
-  console.log(prova);
-  return prova;
-}
+var nrUser = "";
 
-// console.log(nrUser);
+function clickato(clicked) {
+  nrUser = clicked;
+  console.log(nrUser);
+  return nrUser;
+}
+console.log(nrUser);
+
 
 // document.getElementById("bottone").addEventListener("click", function() {
 //   if (document.getElementById("easy").checked) {
