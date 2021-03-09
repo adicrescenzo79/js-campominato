@@ -1,0 +1,33 @@
+*{
+  margin-left: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  height: 100vh;
+}
+
+#campo{
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  padding-top: 65px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#campo > * {
+  border: 1px solid black;
+
+}
+
+#difficolta{
+  position: fixed;
+  width: 100px;
+  height: 100vh;
+}

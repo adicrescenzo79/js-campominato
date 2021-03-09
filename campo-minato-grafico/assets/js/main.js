@@ -1,6 +1,35 @@
+var campoDOM = document.querySelector("#campo");
+var div;
 var bombe = [];
 var safe = [];
-var max = "";
+var max = 50;
+
+for (var i = 1; i <= max; i++) {
+  var larghezza = 8000 / max;
+  var altezza = 4000 / max;
+
+  div = document.createElement ('DIV');
+  div.setAttribute("id", i);
+  div.setAttribute("class", "casella");
+  div.setAttribute('style', "width:" + larghezza + "px;height:" + altezza + "px");
+  div.setAttribute("onclick", "clickato(this.id)")
+  // nrUser = div.addEventListener('click', clickato);
+
+  campoDOM.appendChild(div);
+}
+
+document.getElementsByClassName("casella").onclick = function() {clickato(clicked)};
+nrUser = document.getElementsByClassName("casella").onclick;
+console.log(nrUser);
+// console.log(nrUser);
+//
+function clickato(clicked) {
+  prova = clicked;
+  console.log(prova);
+  return prova;
+}
+
+// console.log(nrUser);
 
 // document.getElementById("bottone").addEventListener("click", function() {
 //   if (document.getElementById("easy").checked) {
